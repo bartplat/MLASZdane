@@ -1,0 +1,27 @@
+Package: MLASZdane
+Type: Package
+Title: Pakiet do zlaczania danych na potrzeby projektu MLEZAiMD
+Version: 0.4.1
+Authors@R: c(person("Tomasz", "Żółtak", email = "t.zoltak@ibe.edu.pl", role = c("aut", "cre")),
+             person("Bartłomiej", "Płatkowski", email = "b.platkowski@ibe.edu.pl", role = c("aut")))
+Description: Pakiet do złączania danych z rejestrów, baz danych administracyjnych,
+    baz danych wyników egzaminów i wyników badań sondażowych na potrzeby projektu
+    MLEZAiMD.
+License: MIT + file LICENSE
+LazyData: TRUE
+Depends: R (>= 3.5.0)
+Imports:
+    methods,
+    rlang (>= 0.4.1),
+    tidyr (>= 1.0.0),
+    dplyr (>= 0.8.2),
+    haven (>= 2.1.0),
+    jsonlite (>= 1.6)
+Suggests:
+    testthat,
+    covr,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+Encoding: UTF-8
+RoxygenNote: 7.1.1
