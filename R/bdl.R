@@ -98,7 +98,7 @@ wskaznik_bdl = function(id, zamienNazwe = NULL) { # nocov start
 #' @export
 #' @importFrom jsonlite fromJSON
 #' @importFrom tidyr unnest
-#' @importFrom dplyr .data bind_rows left_join mutate rename
+#' @importFrom dplyr .data bind_rows left_join mutate rename filter
 pobierz_dane_bdl = function(wskazniki, lata, poziom = "powiaty") { # nocov start
   stopifnot("wskaznikiBDL" %in% class(wskazniki),
             is.data.frame(wskazniki),

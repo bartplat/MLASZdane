@@ -1,9 +1,9 @@
 #' @title Obliczanie wskaznikow na poziomie zagregowanym
 #' @description Funkcja oblicza wartości wskaźników na poziomie zagregowanym
 #' na podstawie ramki danych ze wskaźnikami z poziomu indywidualnego
-#' (zwrócnej przez funkcję \code{\link{oblicz_wskazniki_ind_1rm}}).
+#' (zwrócnej przez funkcję \code{\link[MLASZdane_r1_2019]{oblicz_wskazniki_ind_1rm}}).
 #' @param wskazniki ramka danych ze wskaźnikami na poziomie idywidualnym
-#' zwracana przez funkcję \code{\link{oblicz_wskazniki_ind_1rm}}
+#' zwracana przez funkcję \code{\link[MLASZdane_r1_2019]{oblicz_wskazniki_ind_1rm}}
 #' @param grupy ramka danych zawierająca definicje podziałów na grupy (oraz
 #' ewentualnie inne zmienne, które zostaną dołączone do zwracanych zbiorów) -
 #' zwrócona przez funkcję \code{\link{utworz_grupowanie_ze_zmiennej}} lub
@@ -25,7 +25,7 @@
 #' }
 #' @seealso Funkcje, które wywołują \code{agreguj_wskazniki}:
 #' \itemize{
-#'   \item{\code{\link{agreguj_wskazniki_1rm}}.}
+#'   \item{\code{\link[MLASZdane_r1_2019]{agreguj_wskazniki_1rm}}.}
 #' }
 #' @export
 #' @importFrom dplyr mutate_all
@@ -205,7 +205,8 @@ proste_wskazniki_na_wektor = function(x) {
 #' @return ramka danych, która może zostać użyta jako argument \code{grupy}
 #' w wywołaniu funkcji \code{\link{agreguj_wskazniki}}.
 #' @export
-#' @importFrom dplyr %>% .data count distinct mutate select
+#' @importFrom rlang ensym
+#' @importFrom dplyr %>% .data count distinct mutate select filter n
 utworz_grupowanie_ze_zmiennej = function(x, zmGrupujaca, zmGrupaOdniesienia,
                                          wykluczGrupeZGrupyOdniesienia = TRUE,
                                          ...) {

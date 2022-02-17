@@ -8,7 +8,7 @@ agreguj_wskazniki(wskazniki, grupy, przekazArgumenty = NULL, ...)
 }
 \arguments{
 \item{wskazniki}{ramka danych ze wskaźnikami na poziomie idywidualnym
-zwracana przez funkcję \code{\link{oblicz_wskazniki_ind_1rm}}}
+zwracana przez funkcję \code{\link[MLASZdane_r1_2019]{oblicz_wskazniki_ind_1rm}}}
 
 \item{grupy}{ramka danych zawierająca definicje podziałów na grupy (oraz
 ewentualnie inne zmienne, które zostaną dołączone do zwracanych zbiorów) -
@@ -37,11 +37,11 @@ lista dwóch ramek danych:
 \description{
 Funkcja oblicza wartości wskaźników na poziomie zagregowanym
 na podstawie ramki danych ze wskaźnikami z poziomu indywidualnego
-(zwrócnej przez funkcję \code{\link{oblicz_wskazniki_ind_1rm}}).
+(zwrócnej przez funkcję \code{\link[MLASZdane_r1_2019]{oblicz_wskazniki_ind_1rm}}).
 }
 \seealso{
 Funkcje, które wywołują \code{agreguj_wskazniki}:
 \itemize{
-  \item{\code{\link{agreguj_wskazniki_1rm}}.}
+  \item{\code{\link[MLASZdane_r1_2019]{agreguj_wskazniki_1rm}}.}
 }
 }

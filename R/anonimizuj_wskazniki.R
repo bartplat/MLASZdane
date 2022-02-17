@@ -6,7 +6,7 @@
 #' których elementy nie są listami zawierającymi element o nazwie \code{n})
 #' pozostaną w zwróconej ramce danych niezmienione.
 #' @param wskazniki ramka danych ze wskaźnikami na poziomie zagregowanym
-#' zwracana przez funkcję \code{\link{agreguj_wskazniki_1rm}}
+#' zwracana przez funkcję \code{\link[MLASZdane_r1_2019]{agreguj_wskazniki_1rm}}
 #' @param prog liczba - minimalna liczba badanych niewymagająca anonimizacji
 #' @return data frame
 #' @export
