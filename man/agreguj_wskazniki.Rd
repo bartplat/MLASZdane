@@ -7,17 +7,20 @@
 agreguj_wskazniki(wskazniki, grupy, przekazArgumenty = NULL, ...)
 }
 \arguments{
-\item{wskazniki}{ramka danych ze wskaźnikami na poziomie idywidualnym
-zwracana przez funkcję \code{\link[MLASZdane_r1_2019]{oblicz_wskazniki_ind_1rm}}}
+\item{wskazniki}{ramka danych ze wskaźnikami na poziomie indywidualnym}
 
 \item{grupy}{ramka danych zawierająca definicje podziałów na grupy (oraz
 ewentualnie inne zmienne, które zostaną dołączone do zwracanych zbiorów) -
 zwrócona przez funkcję \code{\link{utworz_grupowanie_ze_zmiennej}} lub
-przygotowana samodzielnie; musi zawierać kolumny \emph{grupa}
-i \emph{odniesienie}, które zawierają wyrażenia wybierające jednostki
-obserwacji należące do danej grupy lub grupy odniesienia (mogą być one
-zapisane \emph{stricte} w formie niezewaluowanych wyrażeń języka, ale także
-formuł lub ciągów znaków)}
+przygotowana samodzielnie; musi zawierać kolumnę \emph{grupa}, która zawiera
+wyrażenia wybierające jednostki obserwacji należące do danej grupy i zwykle
+zawiera (choć nie musi) kolumnę \emph{odniesienie} zawierającą wyrażenia
+wybierające jednostki obserwacji należące do odpowiedniej grupy odniesienia
+(wyrażenia w każdej z tych kolumn mogą być  zapisane \emph{stricte} w formie
+niezewaluowanych wyrażeń języka, ale także formuł lub ciągów znaków);
+\strong{\emph{odniesienie} może też zawierać braki danych, co oznacza, że dla
+danej grupy nie istnieje adekwatna grupa odniesienia} (i w konsekwencji
+obliczenie wskaźników w grupie odniesienia jest tam niemożliwe)}
 
 \item{przekazArgumenty}{argumenty w postaci nazwanej listy które mają zostać
 przekazane do funkcji niższego poziomu}
@@ -31,17 +34,14 @@ lista dwóch ramek danych:
   \item{\code{grupy} - ramka danych zawierająca wskaźniki obliczone dla
         poszczególnych grup,}
   \item{\code{grupyOdniesienia} - ramka danych zawierająca wskaźniki
-        obliczone dla odpowiadających im grup odniesienia.}
+        obliczone dla odpowiadających im grup odniesienia. Jeśli dla danej
+        grupy zdefiniowano, że \strong{ma dla niej nie być używana grupa
+        odniesienia}, to wartość wskaźników w danym wierszu jest albo brakiem
+        danych (wskaźniki niebędące listami) lub jednoelementowym wektorem
+        logicznym zawierającym brak danych (kolumny-listy).}
 }
 }
 \description{
 Funkcja oblicza wartości wskaźników na poziomie zagregowanym
-na podstawie ramki danych ze wskaźnikami z poziomu indywidualnego
-(zwrócnej przez funkcję \code{\link[MLASZdane_r1_2019]{oblicz_wskazniki_ind_1rm}}).
-}
-\seealso{
-Funkcje, które wywołują \code{agreguj_wskazniki}:
-\itemize{
-  \item{\code{\link[MLASZdane_r1_2019]{agreguj_wskazniki_1rm}}.}
-}
+na podstawie ramki danych ze wskaźnikami z poziomu indywidualnego.
 }
