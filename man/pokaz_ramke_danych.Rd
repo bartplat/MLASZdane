@@ -16,7 +16,7 @@ ciąg znaków
 }
 \description{
 Nieeksportowana funkcja zwracająca zawartość ramki danych
-w formie ciągu znaków, który można wydrykować przy pomocy np. funkcji
+w formie ciągu znaków, który można wydrukować przy pomocy np. funkcji
 \code{\link[base]{message}}, zamiast używać \code{print}
 }
 \seealso{
