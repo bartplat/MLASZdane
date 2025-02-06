@@ -5,21 +5,19 @@
 
 # MLASZdane
 
-Pakiet został opracowany w ramach projektu *Monitorowanie losów edukacyjno-zawodowych absolwentów i młodych dorosłych* (POWR.02.15.00-IP.02-00-004/16) prowadzonego w Instytucie Badań Edukacyjnych w ramach działania 2.15. Kształcenie i szkolenie zawodowe dostosowane do potrzeb zmieniającej się gospodarki II. osi priorytetowej Efektywne polityki publiczne dla rynku pracy, gospodarki i edukacji Programu Operacyjnego Wiedza, Edukacja, Rozwój
+Pakiet został opracowany w ramach projektu *Monitorowanie losów edukacyjno-zawodowych absolwentów i młodych dorosłych* (POWR.02.15.00-IP.02-00-004/16) prowadzonego w Instytucie Badań Edukacyjnych w ramach działania 2.15. Kształcenie i szkolenie zawodowe dostosowane do potrzeb zmieniającej się gospodarki II. osi priorytetowej Efektywne polityki publiczne dla rynku pracy, gospodarki i edukacji Programu Operacyjnego Wiedza, Edukacja, Rozwój.
 
-Pakiet służy do złączania danych z rejestrów, baz danych administracyjnych, baz danych wyników egzaminów i wyników badań sondażowych na potrzeby projektu MLEZAiMD.
+Obecnie pakiet służy do agregacji wskaźników na potrzeby Monitoringu Karier Absolwentów, a dawniej na potrzeby projektu MLASZ.
 
 # Instalacja / aktualizacja
 
-Pakiet nie jest wypchnięty na CRAN, więc trzeba instalować go ze źródeł.
-
-Ponieważ jednak zawiera jedynie kod w R, nie ma potrzeby zaopatrywać się w kompilatory, itp.
+Pakiet nie jest dostępny na CRAN, więc trzeba instalować go ze źródeł.
 
 Instalację najprościej przeprowadzić wykorzystując pakiet *devtools*:
 
 ```r
 install.packages('devtools') # potrzebne tylko, gdy nie jest jeszcze zainstalowany
-devtools::install_github('losyabsolwentow/MLASZdane', build_opts = c("--no-resave-data"))
+devtools::install_github('bartplat/MLASZdane', build_opts = c("--no-resave-data"))
 ```
 
 Dokładnie w ten sam sposób można przeprowadzić aktualizację pakietu do najnowszej wersji.
